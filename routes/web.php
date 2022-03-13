@@ -21,4 +21,25 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/donations', function (){
+    return view('donations.index');
+})->name('donations');
+
+Route::get('/patients', function (){
+    return view('patients.index');
+})->name('patients');
+Route::get('/donors', function (){
+    return view('donors.index');
+})->name('donors');
+Route::get('/forms', function (){
+    return view('forms.index');
+})->name('forms');
+Route::get('/settings', function (){
+    return view('settings.index');
+})->name('settings');
+Route::get('/profile', function (){
+    return view('profile.index');
+})->name('profile');
+
+
 require __DIR__.'/auth.php';
